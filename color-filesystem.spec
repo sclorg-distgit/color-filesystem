@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1
-Release:        13.11%{?dist}
+Release:        13.12%{?dist}
 Summary:        Color filesystem layout
 
 License:        Public Domain
@@ -23,7 +23,7 @@ This package provides some directories that are required/used to store color.
 # Nothing to build
 
 %install
-%{?scl:scl enable maven30 %{scl} - <<"EOF_SCL"}
+%{?scl:scl enable %{scl} - <<"EOF_SCL"}
 set -e -x
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/color/icc
@@ -53,6 +53,9 @@ EOF
 %{_root_sysconfdir}/rpm/macros.color%{?scl:.%{scl}}
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1-13.12
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 1-13.11
 - maven33 rebuild
 
