@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1
-Release:        13.12%{?dist}
+Release:        13.13%{?dist}
 Summary:        Color filesystem layout
 
 License:        Public Domain
@@ -53,6 +53,9 @@ EOF
 %{_root_sysconfdir}/rpm/macros.color%{?scl:.%{scl}}
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1-13.13
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1-13.12
 - maven33 rebuild #2
 
